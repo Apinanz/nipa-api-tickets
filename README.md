@@ -284,3 +284,13 @@
      "message": "Ticket successfully status update"
  }
  ```
+ 
+# Error codes
+Refer to the following descriptions:
+    Code     | Description
+------------ | ------------
+0 | No Error
+1 | Not Provide
+2 | Invalid Email
+3 | Invalid Telephone Number 
+4 | Invalid Status
