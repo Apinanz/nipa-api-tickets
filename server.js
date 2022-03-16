@@ -43,7 +43,7 @@ password : "IxLL3PQoJGGrTf5g",
 host : "nipa-api-ticket-db-do-user-11127953-0.b.db.ondigitalocean.com",
 port : "25060",
 database : "nipa-api-db",
-sslmode : REQUIRED
+sslmode : "REQUIRED"
 
 })
 dbCon.connect();
