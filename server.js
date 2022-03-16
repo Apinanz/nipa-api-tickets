@@ -49,10 +49,10 @@ app.get('/tickets', (req, res) => {
     let query = "ORDER BY";
 
     if (req.params['status-sort'] != undefined) {
-        query += ","+` status ${req.params['status-sort']}`;
+        query += ","+` status ${req.body['status-sort']}`;
     }
-    if (req.body['last-update-sort'] != undefined) {
-        query += ","+` last_update ${req.params['last-update-sort']}`;
+    if (req.params['last-update-sort'] != undefined) {
+        query += ","+` last_update ${req.body['last-update-sort']}`;
     }
     if(query=="ORDER BY"){
         query = "";
