@@ -37,7 +37,6 @@ app.get('/', (req, res) => {
 
 // connection to masql database
 let dbCon = mysql.createConnection({
-
 username : "b38cc62c10c6e6",
 password : "fab81686",
 host : "us-cdbr-east-05.cleardb.net",
