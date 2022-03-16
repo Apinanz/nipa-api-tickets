@@ -48,11 +48,11 @@ dbCon.connect();
 app.get('/tickets', (req, res) => {
     let query = "ORDER BY";
 
-    if (req.params['status-sort'] != undefined) {
-        query += ","+` status ${req.body['status-sort']}`;
+    if (req.query['status-sort'] != undefined) {
+        query += ","+` status ${req.query['status-sort']}`;
     }
-    if (req.params['last-update-sort'] != undefined) {
-        query += ","+` last_update ${req.body['last-update-sort']}`;
+    if (req.query['last-update-sort'] != undefined) {
+        query += ","+` last_update ${req.query['last-update-sort']}`;
     }
     if(query=="ORDER BY"){
         query = "";
