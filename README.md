@@ -1,11 +1,11 @@
  # nipa-official-api-ticket-docs
 
  # Table of contents
- * Base URL
- * Endpoint type
- * Constructing the request
- * API Documentation
- * Error codes
+* [Base URL](#base-url)
+* [Endpoint types](#endpoint-types)
+* [Constructing the request](#constructing-the-request)
+* [API documentation](#api-documentation)
+* [Error codes](#error-codes)
 
  # Base URL
  * The base URL is:
@@ -20,7 +20,7 @@
 
  # Constructing the request
  ### GET/POST/PUT request
- * GET requests require parameters as query string in the URL (e.g. ?status-sort=ASC).
+ * GET requests require x-www-form-urlencoded.
  * POST requests require x-www-form-urlencoded.
  * PUT requests require x-www-form-urlencoded or parameters as query string in the URL (e.g. ?id=2&title=Nipa).
 
@@ -34,7 +34,7 @@
  #### Response:
  ```json
  {
-     "error": false,
+     "error": 0,
      "data": [
          {
              "id": 1,
@@ -60,7 +60,7 @@
  Get ticker information by sort
  #### Query:
 
- Parameter | Argument | 
+ Key | Value | 
  ----------|----------|
  status-sort | ASC , DESC
  last-update-sort | ASC , DESC
@@ -72,7 +72,7 @@
  * status-sort
  ``` json
  {
-     "error": false,
+     "error": 0,
      "data": [
          {
              "id": 1,
@@ -112,7 +112,7 @@
  * last-update-sort
  ``` json
  {
-     "error": false,
+     "error": 0,
      "data": [
          {
              "id": 2,
@@ -152,7 +152,7 @@
  * status-sort and last-update-sort
  ``` json
  {{
-     "error": false,
+     "error": 0,
      "data": [
          {
              "id": 1,
@@ -197,7 +197,7 @@
  #### Response:
  ``` json
  {
-     "error": false,
+     "error": 0,
      "data": [
          {
              "id": 1,
@@ -220,7 +220,7 @@
  #### Description: 
  Create a new ticket with these pieces of information : title,description, contact information, created timestamp, lastst ticket update timestamp.
  #### Query:
- Parameter | Argument | 
+ Key | Value | 
  ----------|----------|
  titel | String
  description | String
@@ -233,7 +233,7 @@
  #### Response:
  ``` json
  {
-     "error": false,
+     "error": 0,
      "data": {
          "fieldCount": 0,
          "affectedRows": 1,
@@ -252,6 +252,8 @@
  #### Description: 
  Update a ticket's information and status
  #### Query:
+  Key | Value | 
+ ----------|----------|
  id | int
  titel | String
  description | String
@@ -268,7 +270,7 @@
  #### Response:
  ``` json
  {
-     "error": false,
+     "error": 0,
      "data": {
          "fieldCount": 0,
          "affectedRows": 1,
@@ -282,3 +284,13 @@
      "message": "Ticket successfully status update"
  }
  ```
+ 
+# Error codes
+Refer to the following descriptions:
+    Code     | Description
+------------ | ------------
+0 | No Error
+1 | Not Provide
+2 | Invalid Email
+3 | Invalid Telephone Number 
+4 | Invalid Status
