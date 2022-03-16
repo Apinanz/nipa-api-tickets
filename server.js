@@ -38,12 +38,12 @@ app.get('/', (req, res) => {
 // connection to masql database
 let dbCon = mysql.createConnection({
 
-    host: 'app-ce6be604-df9b-4026-872d-1c3b89294f67-do-user-11127953-0.b.db.ondigitalocean.com',
-    user: 'node-api-nipa',
-    password: 'UCLsTWTo3aK7o4mB',
-    database: 'node-api-nipa',
-    port : 25060,
-    sslmode  : require
+username : "doadmin",
+password : "IxLL3PQoJGGrTf5g",
+host : "nipa-api-ticket-db-do-user-11127953-0.b.db.ondigitalocean.com",
+port : "25060",
+database : "nipa-api-db",
+sslmode : REQUIRED
 
 })
 dbCon.connect();
