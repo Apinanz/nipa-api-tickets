@@ -40,8 +40,7 @@ let dbCon = mysql.createConnection({
     host : "us-cdbr-east-05.cleardb.net",
     user : "b38cc62c10c6e6",
     password : "fab81686",
-
-database : "heroku_7772d4482dedb38",
+    database : "heroku_7772d4482dedb38",
 })
 dbCon.connect();
 
