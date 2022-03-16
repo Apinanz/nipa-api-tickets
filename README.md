@@ -8,7 +8,7 @@
 * [Error codes](#error-codes)
 
  # Base URL
- * The base URL is:
+ * The base URL is:https://nipa-api-tickets-itaug.ondigitalocean.app
 
  # Endpoint types
  ### Non-secure endpoints
