@@ -161,26 +161,26 @@ app.get('/tickets/filter/:status', (req, res) => {
 
 //update infomation ticket by id
 app.put('/tickets/edit', (req, res) => {
-    let id = req.params.id;
+    let id = req.body.id;
     
 
     //validation
-    if (req.params['email'] != undefined && !emailvalidator.validate(req.params['email'])) {
+    if (req.body['email'] != undefined && !emailvalidator.validate(req.body['email'])) {
         return res.status(400).send({ error: 2, message: "Please provide your email or invalid email" })
-    } else if (req.params['telephone'] != undefined && !validatePhoneNumber.validate(req.params['telephone'])) {
+    } else if (req.body['telephone'] != undefined && !validatePhoneNumber.validate(req.body['telephone'])) {
         return res.status(400).send({ error: 3, message: "Please provide your telephone number or invalid telephone number" });
-    } else if (req.params['status'] != undefined && !listStatus.has(req.params['status'])) {
+    } else if (req.body['status'] != undefined && !listStatus.has(req.body['status'])) {
         return res.status(400).send({ error: 4, message: "Please provide your status or invalid status" });
     }
 
     let query = "";
-    for (key in req.params) {
-        if (!req.params[key] || req.params[key].length == 0) {
+    for (key in req.body) {
+        if (!req.body[key] || req.body[key].length == 0) {
             continue;
         }
 
         if (key != 'id') {
-            query += ", " + key + "=" + `'${req.params[key]}'`;
+            query += ", " + key + "=" + `'${req.body[key]}'`;
 
         }
 
