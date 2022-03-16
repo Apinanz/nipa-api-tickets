@@ -38,13 +38,10 @@ app.get('/', (req, res) => {
 // connection to masql database
 let dbCon = mysql.createConnection({
 
-username : "doadmin",
-password : "IxLL3PQoJGGrTf5g",
-host : "nipa-api-ticket-db-do-user-11127953-0.b.db.ondigitalocean.com",
-port : "25060",
-database : "nipa-api-db",
-sslmode : "REQUIRED"
-
+username : "b38cc62c10c6e6",
+password : "fab81686",
+host : "us-cdbr-east-05.cleardb.net",
+database : "heroku_7772d4482dedb38",
 })
 dbCon.connect();
 
