@@ -7,6 +7,7 @@ let port = process.env.PORT || 3000;
 const emailvalidator = require("email-validator");
 const validatePhoneNumber = require("validate-phone-number-node-js");
 const listStatus = new Set(["pending", "accepted", "resolved", "rejected"]);
+var connection;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -204,6 +205,7 @@ app.put('/tickets/edit', (req, res) => {
 
 
 })
+
 
 function handleDisconnect() {
     connection = dbCon; 
