@@ -8,7 +8,7 @@
 * [Error codes](#error-codes)
 
  # Base URL
- * The base URL is:
+ * The base URL is:https://nipa-api-tickets-itaug.ondigitalocean.app
 
  # Endpoint types
  ### Non-secure endpoints
@@ -20,9 +20,9 @@
 
  # Constructing the request
  ### GET/POST/PUT request
- * GET requests require x-www-form-urlencoded.
+ * GET requests require x-www-form-urlencoded or parameters as query string in the URL (e.g. ?status=accepted).
  * POST requests require x-www-form-urlencoded.
- * PUT requests require x-www-form-urlencoded or parameters as query string in the URL (e.g. ?id=2&title=Nipa).
+ * PUT requests require x-www-form-urlencoded.
 
  # API Documentation
  Refer to the following for description of each endpoint
